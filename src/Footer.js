@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="d-flex justify-content-center footer-github-link Footer">
       <strong>
         <a
-          href="https://github.com/indicasta/IndiCasta"
+          href="https://github.com/indicasta/ReactWeatherApp"
           title="IndiCasta🧿's React Weather App"
           className="text-decoration-none"
         >
