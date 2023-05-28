@@ -13,7 +13,7 @@ export default function WeatherInfo({ loadingData, showData, weather }) {
   }
 
   return (
-    <div className="Weather mt-3 p-2">
+    <div className="Weather mt-4">
       {showData ? (
         <ul>
           <li>
