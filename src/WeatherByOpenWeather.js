@@ -3,6 +3,7 @@ import axios from "axios";
 import SearchForm from "./SearchForm";
 import WeatherInfo from "./WeatherInfo";
 import Footer from "./Footer";
+import CurrentLocation from "./CurrentLocation";
 import "./App.css";
 
 export default function WeatherByOpenWeather() {
@@ -38,6 +39,7 @@ export default function WeatherByOpenWeather() {
   return (
     <React.Fragment>
       <SearchForm getCity={getCity} />
+      <CurrentLocation />
       <WeatherInfo showData={show} loadingData={loading} weather={weather} />
       <Footer />
     </React.Fragment>

@@ -6,6 +6,7 @@ export default function SearchForm({ getCity }) {
 
   return (
     <form
+      className="mt-0 py-0"
       onSubmit={(event) => {
         event.preventDefault();
         console.log({ CityToSearch });

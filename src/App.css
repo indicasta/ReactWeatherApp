@@ -1,23 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
+  width: 100%;
+  height: 100vh;
+  color: #efddc4;
+  position: relative;
 }
-
 .App-logo {
-  height: 30vmin;
+  height: 25vmin;
+  margin: 0;
+  padding: 0;
   pointer-events: none;
 }
-body {
-  background-color: #282c34;
-}
-input {
-  font-size: 30px;
+.App::before {
+  content: "";
+  background: url("./images/sky-bg.jpg") no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: 0;
+  z-index: -1;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 10s linear;
   }
 }
-
+body {
+  background-color: rgba(#282c34, #282c34, #282c34, 0.6);
+}
+form {
+  font-size: 25px;
+}
 li,
 h2 {
   color: rgb(244, 218, 213);
@@ -32,13 +50,11 @@ ul {
   width: 100px;
 }
 .App-info {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   font-size: calc(20px + 2vmin);
-  color: white;
 }
 
 @keyframes App-logo-spin {

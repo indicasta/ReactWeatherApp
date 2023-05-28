@@ -17,14 +17,14 @@
   --whatsapp-color: #25d366;
   --custom-gradient: linear-gradient(
     109.6deg,
-    rgb(38, 38, 207) 11.2%,
-    rgb(144, 6, 161) 53.7%,
+    rgb(38, 233, 181) 11.2%,
+    rgb(227, 53, 250) 53.7%,
     rgb(0, 212, 255) 100.2%
   );
 }
 .Footer {
   font-family: "SF Mono", sans-serif;
-  color: aliceblue;
+  color: rgb(207, 244, 73);
 }
 .footer-github-link a {
   color: transparent;

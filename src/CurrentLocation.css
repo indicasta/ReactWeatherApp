@@ -1,0 +1,9 @@
+.PositionBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 0.2vmin;
+}
+img {
+  max-width: 80px;
+}
