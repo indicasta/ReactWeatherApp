@@ -36,6 +36,13 @@ body {
 form {
   font-size: 25px;
 }
+input {
+  background: rgba(255, 255, 255, 0.1);
+  color: #0797cb;
+}
+::placeholder {
+  color: #0797cb;
+}
 li,
 h2 {
   color: rgb(244, 218, 213);

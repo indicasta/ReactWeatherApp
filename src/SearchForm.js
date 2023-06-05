@@ -20,8 +20,14 @@ export default function SearchForm({ getCity }) {
         autoComplete="off"
         value={CityToSearch}
         onChange={(ev) => setCityToSearch(ev.target.value)}
+        className="px-2 border-2 rounded-pill border-info"
+        autoFocus="on"
       />
-      <input type="submit" value="Search" />
+      <input
+        type="submit"
+        value="Search"
+        className="px-2 border-2 rounded-pill border-info"
+      />
     </form>
   );
 }
