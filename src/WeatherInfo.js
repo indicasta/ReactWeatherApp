@@ -31,39 +31,47 @@ export default function WeatherInfo({
   return (
     <div className="Weather mt-4">
       {showData ? (
-        <ul>
-          <li>
-            <strong className="text-uppercase">
-              {weather.name} ({weather.sys.country})
-            </strong>{" "}
-          </li>
-          <li>
-            <strong>
-              <span className="temperature">
-                {Math.round(weather.main.temp)}
-              </span>
-              <span className="units">°C|</span>
-              <button className="units" id="unit">
-                °F
-              </button>
-            </strong>
-          </li>
-          <li>
-            <strong>{weather.weather[0].description}</strong>
+        <div className="d-flex justify-content-center">
+          <div className="me-5">
+            <ul>
+              <li>
+                <strong className="text-uppercase city">
+                  {weather.name} ({weather.sys.country})
+                </strong>{" "}
+              </li>
+              <li>
+                <strong>
+                  <span className="temperature">
+                    {Math.round(weather.main.temp)}
+                  </span>
+                  <span className="units">°C|</span>
+                  <button className="units" id="unit">
+                    °F
+                  </button>
+                </strong>
+              </li>
+              <li>
+                <strong>{weather.weather[0].description}</strong>
 
-            <img src={url} alt="icon" className="icon" />
-          </li>
-          <li>
-            Humidity: <strong>{weather.main.humidity}%</strong>
-          </li>
-          <li>
-            Wind:{" "}
-            <strong>
-              {weather.wind.speed}
-              <span className="text-lowercase"> m/s</span>
-            </strong>
-          </li>
-        </ul>
+                <img src={url} alt="icon" className="icon" />
+              </li>
+            </ul>
+          </div>
+          <div className="ms-5 mt-5">
+            <ul>
+              <li>
+                Humidity: <strong>{weather.main.humidity}%</strong>
+              </li>
+              <li>
+                Wind:{" "}
+                <strong>
+                  {weather.wind.speed}
+                  <span className="text-lowercase"> m/s</span>
+                </strong>
+              </li>
+            </ul>
+          </div>
+        </div>
       ) : (
         <h2>
           {errorDetails}
