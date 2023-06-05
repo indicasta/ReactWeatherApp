@@ -3,6 +3,7 @@ import axios from "axios";
 import locButton from "./images/currentLocation.png";
 import "./CurrentLocation.css";
 import GeoLocation from "./GeoLocation";
+import { Tooltip } from "react-tooltip";
 
 export default function CurrentLocation({ displayInfo }) {
   let apiKey = "a867e25f2d83db579421a57fd8e937ec";
@@ -43,8 +44,16 @@ export default function CurrentLocation({ displayInfo }) {
     }
   }
   return (
-    <button className="PositionBtn img-fluid mx-auto">
-      <img src={locButton} alt="Current Location" onClick={onClick} />
-    </button>
+    <div>
+      <button
+        className="PositionBtn img-fluid mx-auto "
+        data-tooltip-id="currentLoc"
+        data-tooltip-content="Current Location Info"
+        data-tooltip-float="true"
+      >
+        <img src={locButton} alt="Current Location" onClick={onClick} />
+      </button>
+      <Tooltip id="currentLoc"></Tooltip>
+    </div>
   );
 }

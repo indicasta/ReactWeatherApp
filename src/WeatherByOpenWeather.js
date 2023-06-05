@@ -45,8 +45,15 @@ export default function WeatherByOpenWeather() {
   }
   return (
     <React.Fragment>
-      <SearchForm getCity={getCity} />
-      <CurrentLocation displayInfo={getCurrentLocationInfo} />
+      <div className="d-flex justify-content-center">
+        <div className="me-5 mb-4 pt-0">
+          <CurrentLocation displayInfo={getCurrentLocationInfo} />
+        </div>
+        <div className="align-self-center">
+          <SearchForm getCity={getCity} />
+        </div>
+      </div>
+
       <WeatherInfo
         showData={show}
         loadingData={loading}
