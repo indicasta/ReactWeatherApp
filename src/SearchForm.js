@@ -9,7 +9,6 @@ export default function SearchForm({ getCity }) {
       className="mt-0 py-0 mx-auto"
       onSubmit={(event) => {
         event.preventDefault();
-        console.log({ CityToSearch });
         getCity(CityToSearch);
       }}
     >

@@ -3,7 +3,7 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <div className="d-flex justify-content-center footer-github-link Footer mb-3 mt-1">
+    <div className="d-flex justify-content-center footer-github-link Footer mb-5 mt-0">
       <strong>
         <a
           href="https://github.com/indicasta/ReactWeatherApp"

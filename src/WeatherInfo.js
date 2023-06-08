@@ -1,6 +1,7 @@
 import React from "react";
 import Spinner from "./Spinner";
 import FormattedDate from "./FormattedDate";
+import Temperature from "./Temperature";
 import "./App.css";
 
 export default function WeatherInfo({
@@ -19,18 +20,6 @@ export default function WeatherInfo({
     url = `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`;
     date = new Date(weather.dt * 1000);
   }
-  // function celsiustoFahrenheit(degree) {
-  //   return Math.round((degree * 9) / 5 + 32);
-  // }
-  // function fahrenheittoCelsius(degree) {
-  //   return Math.round(((degree - 32) * 5) / 9);
-  // }
-  // function mps2mph(velocity) {
-  //   return Math.round(velocity * 2.237);
-  // }
-  // function mph2mps(velocity) {
-  //   return Math.round(velocity / 2.237);
-  // }
   return (
     <div className="Weather mt-4">
       {showData ? (
@@ -46,32 +35,26 @@ export default function WeatherInfo({
                 <FormattedDate date={date} />
               </li>
               <li>
-                <strong>
-                  <span className="temperature">
-                    {Math.round(weather.main.temp)}
-                  </span>
-                  <span className="units">°C|</span>
-                  <button className="units" id="unit">
-                    °F
-                  </button>
-                </strong>
+                <Temperature temp={weather.main.temp} />
               </li>
               <li>
                 <strong>{weather.weather[0].description}</strong>
-
-                <img src={url} alt="icon" className="icon" />
+                <div>
+                  <img src={url} alt="icon" className="icon mt-0" />
+                </div>
               </li>
             </ul>
           </div>
           <div className="ms-5 mt-5">
             <ul>
               <li>
-                Humidity: <strong>{weather.main.humidity}%</strong>
+                <span className="title">Humidity: </span>{" "}
+                <strong>{weather.main.humidity}%</strong>
               </li>
               <li>
-                Wind:{" "}
+                <span className="title">Wind: </span>
                 <strong>
-                  {weather.wind.speed}
+                  {Math.round(weather.wind.speed)}
                   <span className="text-lowercase"> m/s</span>
                 </strong>
               </li>
@@ -81,7 +64,7 @@ export default function WeatherInfo({
       ) : (
         <h2>
           {errorDetails}
-          <span>🏙</span>
+          <span> 🏙</span>
         </h2>
       )}
     </div>

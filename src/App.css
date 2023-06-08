@@ -55,7 +55,8 @@ ul {
 }
 
 .icon {
-  width: 100px;
+  height: 20vmin;
+  max-width: 350px;
 }
 .App-info {
   display: flex;
@@ -82,12 +83,17 @@ ul {
 }
 
 .city {
-  font-size: 25px;
+  font-size: 32px;
   font-family: serif;
 }
 .date {
+  font-size: 20px;
   font-family: "SF Mono", sans-serif;
   color: rgb(207, 244, 73);
+}
+.title {
+  color: white;
+  font-weight: 600;
 }
 @keyframes App-logo-spin {
   from {
